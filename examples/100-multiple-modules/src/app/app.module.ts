@@ -7,6 +7,7 @@ import {ProductsModule} from './products/products.module';
 
 // components
 import {AppComponent} from './app.component';
+import { MyModuleModule } from './my-module/my-module.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {AppComponent} from './app.component';
   imports: [
     BrowserModule,
     CustomerModule,
-    ProductsModule
+    ProductsModule,
+    MyModuleModule
   ],
   bootstrap: [AppComponent]
 })
