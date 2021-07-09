@@ -1,0 +1,8 @@
+<div *ngIf="currentCity">
+  <h2>Current city: {{ currentCity.name }}</h2>
+  <img
+    class="cityPhoto img-responsive"
+    [src]="cityPhoto"
+    alt="Picture of {{ currentCity.name }}"
+  />
+</div>

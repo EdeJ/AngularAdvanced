@@ -12,6 +12,8 @@ import {HomeComponent} from './home/home.component';
 import {SmartComponent} from './smart-view/smart.component';
 import { CityListComponent } from './smart-view/city-list/city-list.component';
 import { CityVisitedComponent } from './smart-view/city-visited/city-visited.component';
+import { CurrentCityComponent } from './smart-view/current-city/current-city.component';
+import { VisitedListComponent } from './smart-view/visited-list/visited-list.component';
 
 @NgModule({
 	declarations: [
@@ -19,7 +21,9 @@ import { CityVisitedComponent } from './smart-view/city-visited/city-visited.com
 		HomeComponent,
 		SmartComponent,
 		CityListComponent,
-		CityVisitedComponent
+		CityVisitedComponent,
+		CurrentCityComponent,
+		VisitedListComponent
 	],
 	imports     : [
 		BrowserModule,

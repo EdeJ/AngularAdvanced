@@ -2,22 +2,23 @@
   <div class="col-md-6">
     <h2>Smart/view component- My favorite cities:</h2>
     <!-- The <city-list>-component is now the view component for list of cities -->
-    <city-list [cities]="cities" (selectCity)="getCity($event)" (toggleVisited)="toggleCity($event)">
+    <city-list
+      [cities]="cities"
+      (selectCity)="getCity($event)"
+      (toggleVisited)="toggleCity($event)"
+    >
     </city-list>
-    <hr>
+    <hr />
     <!--Workshop 1. - create a view component for the current/selected city component -->
-    <div *ngIf="currentCity">
-      <h2>Current city: {{ currentCity.name }}</h2>
-      <img class="cityPhoto img-responsive" [src]="cityPhoto" alt="Picture of {{ currentCity.name}}">
-    </div>
+
+    <app-current-city
+      *ngIf="currentCity"
+      [currentCity]="currentCity"
+      [cityPhoto]="cityPhoto"
+    ></app-current-city>
   </div>
   <div class="col-md-4">
     <!--Workshop 2. - create a view component for the "I visited" component -->
-    <h2>I Visited: </h2>
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let city of visitedCities">
-        {{ city.name }}
-      </li>
-    </ul>
+    <app-visited-list [visitedCities]="visitedCities"></app-visited-list>
   </div>
 </div>
